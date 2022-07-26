@@ -1,0 +1,466 @@
+/*-------------------CUSTOM PROPERTIES----------------------*/
+html {
+  box-sizing: border-box;
+  font-family: "Arima";
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+html *,
+html *::after,
+html *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 1.5px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(228, 11, 11);
+  border-radius: 5px;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(45, 40, 40);
+  position: static;
+  display: flex;
+  align-items: center;
+}
+.header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header nav h1 {
+  font-size: 40px;
+  margin-left: 1rem;
+  letter-spacing: 10px;
+}
+.header nav h1 a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.header nav h1 a:hover {
+  color: rgb(239, 107, 12);
+}
+.header nav .nav-items {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 2rem;
+}
+.header nav .nav-items a {
+  margin: 0 1.5rem;
+  padding: 5px;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.header nav .nav-items a:hover {
+  color: rgb(239, 107, 12);
+}
+
+.hero-image {
+  box-shadow: 0 -0.5px 4px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("..//assets/imgs/hero-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.hero-image .hero-contain {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  text-align: center;
+}
+.hero-image .hero-contain .hero-title {
+  font-weight: bold;
+  font-size: 6vw;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px #000, -2px -1px 0 #000, 2px -1px 0 #000, -2px 2px 0 #000, 2px 1px 0 #000;
+  margin-bottom: 1rem;
+}
+.hero-image .hero-contain .hero-btn {
+  background-color: rgb(203, 93, 14);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: 3vw;
+  padding: 0.5rem;
+}
+.hero-image .hero-contain .hero-btn:hover {
+  background-color: rgb(252, 108, 4);
+  color: white;
+}
+
+.acerca {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(211, 208, 208, 0.21);
+}
+.acerca .card-prese {
+  position: absolute;
+  left: 7%;
+  top: 5%;
+  bottom: 5%;
+  width: 30vw;
+  height: 90vh;
+  box-shadow: 10px 5px 5px 1px rgba(0, 0, 0, 0.25);
+}
+.acerca .card-prese h2 {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+.acerca .card-prese h3 {
+  text-align: center;
+  margin-top: -5px;
+  font-size: 20px;
+}
+.acerca .card-prese hr {
+  margin: 5px auto;
+  color: black;
+  background-color: black;
+  width: 80%;
+}
+.acerca .card-prese .card-text {
+  width: 80%;
+  height: auto;
+  margin: 10% auto;
+}
+.acerca .card-prese .card-text p {
+  font-size: 15px;
+  text-align: justify;
+}
+.acerca .card-prese .card-btn {
+  background-color: rgb(203, 93, 14);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 7px;
+  position: absolute;
+  padding: 10px;
+  margin-left: 20%;
+  bottom: 10%;
+  font-size: 30px;
+}
+.acerca .card-prese .card-btn:hover {
+  background-color: rgb(252, 108, 4);
+  color: white;
+}
+.acerca .card-photo {
+  position: absolute;
+  right: 15%;
+  top: 2.5%;
+  height: 45vh;
+  width: 30vw;
+}
+.acerca .card-photo img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 5px 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.acerca .card-skills {
+  position: absolute;
+  bottom: 2.5%;
+  right: 15%;
+  height: 45vh;
+  width: 30vw;
+}
+.acerca h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.acerca .ds-web {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.acerca .ds-web h3 {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+}
+.acerca .ds-web h4 {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  right: 0;
+  text-align: right;
+}
+.acerca .ds-web .outside {
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+  width: 100%;
+  height: 15px;
+  top: 30px;
+}
+.acerca .ds-web .inside {
+  width: 50%;
+  height: 15px;
+  background-color: rgba(203, 93, 14, 0.97);
+}
+.acerca .desa-web {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.acerca .desa-web h3 {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  top: 70px;
+}
+.acerca .desa-web h4 {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  right: 0;
+  text-align: right;
+  top: 70px;
+}
+.acerca .desa-web .outside {
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+  width: 100%;
+  height: 15px;
+  top: 100px;
+}
+.acerca .desa-web .inside {
+  width: 47%;
+  height: 15px;
+  background-color: rgba(203, 93, 14, 0.97);
+}
+.acerca .ingles {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.acerca .ingles h3 {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  top: 140px;
+}
+.acerca .ingles h4 {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  right: 0;
+  text-align: right;
+  top: 140px;
+}
+.acerca .ingles .outside {
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+  width: 100%;
+  height: 15px;
+  top: 170px;
+}
+.acerca .ingles .inside {
+  width: 65%;
+  height: 15px;
+  background-color: rgba(203, 93, 14, 0.97);
+}
+
+.portafolio {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(251, 251, 251);
+}
+.portafolio h2 {
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  border-top: thick solid rgba(203, 93, 14, 0.97);
+  border-bottom: thick solid rgba(203, 93, 14, 0.97);
+}
+.portafolio .card {
+  width: 25%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.25);
+  background-color: rgba(217, 217, 217, 0.04);
+}
+.portafolio .card1 {
+  top: 30%;
+  left: 5%;
+}
+.portafolio .card1 h3 {
+  text-align: center;
+}
+.portafolio .card1 h3 img {
+  width: 50px;
+  height: 50px;
+}
+.portafolio .card1 h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.portafolio .card1 p {
+  margin: 10px auto;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  font-size: 1.3vw;
+}
+.portafolio .card2 {
+  top: 30%;
+  left: 37.5%;
+}
+.portafolio .card2 h3 {
+  text-align: center;
+}
+.portafolio .card2 h3 img {
+  width: 50px;
+  height: 50px;
+}
+.portafolio .card2 h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.portafolio .card2 p {
+  margin: 10px auto;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  font-size: 1.3vw;
+}
+.portafolio .card3 {
+  top: 30%;
+  right: 5%;
+}
+.portafolio .card3 h3 {
+  text-align: center;
+}
+.portafolio .card3 h3 img {
+  width: 50px;
+  height: 50px;
+}
+.portafolio .card3 h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.portafolio .card3 p {
+  margin: 10px auto;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(246, 242, 242);
+}
+.contact h2 {
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  font-size: 40px;
+  border-top: thick solid rgba(203, 93, 14, 0.97);
+  border-bottom: thick solid rgba(203, 93, 14, 0.97);
+}
+.contact .card-contain {
+  width: 95%;
+  height: 85vh;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+}
+.contact .card-contain p {
+  color: rgba(51, 51, 51, 0.8);
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-top: 14px;
+}
+.contact .c-cards {
+  width: 300px;
+  height: 180px;
+  position: absolute;
+  top: 4%;
+  box-shadow: 4px 4px 10px 5px rgba(203, 93, 14, 0.6);
+}
+.contact .c-cards h3, .contact .c-cards h4 {
+  text-align: center;
+  margin-top: 15px;
+}
+.contact .c-card1 {
+  left: 5%;
+}
+.contact .c-card2 {
+  left: 38%;
+}
+.contact .c-card2 img {
+  fill: orange;
+}
+.contact .c-card3 {
+  right: 5%;
+}
+.contact .c-card4 {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 600px;
+  height: 300px;
+  border: thin solid black;
+  box-shadow: 4px 4px 10px 5px rgba(203, 93, 14, 0.6);
+  padding: 0.3rem;
+}
+.contact .c-card4 input {
+  margin: 14px 14px;
+  border: none;
+  border-bottom: thin solid black;
+  background-color: transparent;
+  padding: 0.2rem;
+  font-family: "Arima";
+}
+.contact .c-card4 textarea {
+  font-family: "Arima";
+  resize: none;
+  margin: 14px 14px;
+}
+.contact .c-card4 .c-btn {
+  background-color: rgb(203, 93, 14);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 7px;
+  position: absolute;
+  font-size: 20px;
+  padding: 5px;
+  top: 77%;
+  right: 5%;
+}
+.contact .c-card4 .c-btn:hover {
+  background-color: rgb(252, 108, 4);
+  color: white;
+}
+
+footer {
+  background-color: #200238;
+  color: white;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
